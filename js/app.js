@@ -34,7 +34,7 @@ const inputField = document.getElementById("text");
 // Variable para actualizar el campo de salida
 const outputField = document.getElementById("encrypted_word");
 
-texto.addEventListener("input", () => {
+inputField.addEventListener("input", () => {
   const inputText = inputField.value;
   const encryptedText = encrypt(inputText);
   outputField.value = encryptedText;
