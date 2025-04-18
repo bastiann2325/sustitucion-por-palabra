@@ -3,7 +3,6 @@ const WORD = "elocuencia";
 const LETTER_KEYS = {}; 
 let key = 0;
 
-
 // Asignar claves a las letras de la palabra
 for (let i = 0; i < WORD.length; i++) {
   // Capturar letra en esa posición
@@ -38,4 +37,12 @@ inputField.addEventListener("input", () => {
   const inputText = inputField.value;
   const encryptedText = encrypt(inputText);
   outputField.value = encryptedText;
+});
+
+// Botón para limpiar
+const clearButton = document.getElementById("clear");
+
+clearButton.addEventListener("click", () => {
+  inputField.value = "";
+  outputField.value = "";
 });
