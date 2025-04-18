@@ -30,5 +30,12 @@ function encrypt(text) {
 }
 
 // Capturar entradad del usuario
-const texto = document.getElementById("texto");
-// 
+const inputField = document.getElementById("texto");
+// Variable para actualizar el campo de salida
+const outputField = document.getElementById("encrypted_word");
+
+texto.addEventListener("input", () => {
+  const inputText = inputField.value;
+  const encryptedText = encrypt(inputText);
+  outputField.value = encryptedText;
+});
